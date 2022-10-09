@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
   <head>
     <title>Bookers2</title>
+    <script src="https://kit.fontawesome.com/63b51cb2a3.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -25,17 +25,22 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
                 <li>
-                  <i class="fa-solid fa-right-from-bracket"></i>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link text-light' %>
+                  <a class:="nav-link text-light">
+                    <%= link_to "Log out", destroy_user_session_path, method: :delete  %>
+                  </a>
                 </li>
               <% else %>
                 <li>
-                  <i class="fa-solid fa-user-plus"></i>
-                  <%= link_to "Sign up", new_user_registration_path, class: 'nav-link text-light' %>
+                  <a class:="nav-link text-light">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <%= link_to "Sign up", new_user_registration_path %>
+                  </a>
                 </li>
                 <li>
-                  <i class="fa-solid fa-right-to-bracket"></i>
-                  <%= link_to "Log in", new_user_session_path, class: 'nav-link text-light' %>
+                  <a class:="nav-link text-light">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <%= link_to "Log in", new_user_session_path %>
+                  </a>
                 </li>
               <% end %>
             </ul>
