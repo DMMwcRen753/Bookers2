@@ -32,6 +32,11 @@
               <% else %>
                 <li>
                   <a class:="nav-link text-light">
+                    <i class="fa-solid fa-link"></i>
+                    <%= link_to "About", about_path %>
+                </li>
+                <li>
+                  <a class:="nav-link text-light">
                     <i class="fa-solid fa-user-plus"></i>
                     <%= link_to "Sign up", new_user_registration_path %>
                   </a>
