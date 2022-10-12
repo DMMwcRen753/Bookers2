@@ -7,7 +7,7 @@ before_action :configure_permitted_parameters, if: :devise_controller?
       flash[:notice] = "Signed in successfully."
       user_path(current_user.id)
     else
-      flash[:notice] = "Signed in successfully."
+      flash[:notice] = "Not Signed in successfully."
       new_user_registration_path
     end
   end
