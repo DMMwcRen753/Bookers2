@@ -31,11 +31,26 @@ header {
     display: block;
 }
 
-.navbar {
+.navbar, .navbar .container{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    
+}
+
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+.navbar-expand-lg {
+    flex-flow: row nowrap;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.navbar {
     position: relative;
     padding: 0.5rem 1rem;
 }
