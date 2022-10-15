@@ -1,6 +1,4 @@
-<p id="notice">
-  <%= flash[:notice] %>
-</p>
+<%= flash[:notice] %>
 <div class="container px-5 px-sm-0">
   <div class="row">
     <%= render 'books/book', user: @user, book: @book %>
