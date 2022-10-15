@@ -23,10 +23,17 @@
       </p>
       <div class="btn-wrapper col-10 mx-auto">
         <div class="row">
-          <%= link_to "Log in", new_user_session_path %>
+          <a class="btn btn-info btn-sm btn-block mb-3 sign_in">
+            <%= link_to new_user_session_path do%>
+              Log in
+            <% end %>
+          </a>
         </div>
         <div class="row">
-          <%= link_to "Sign up", new_user_registration_path %>
+          <a class="btn btn-success btn-sm btn-block sign_up"></a>
+          <%= link_to new_user_registration_path do %>
+            Sign up
+          <% end %>
         </div>
       </div>
     </div>
