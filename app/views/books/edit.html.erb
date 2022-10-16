@@ -15,14 +15,14 @@
       <%= form_with model: @book do |f| %>
         <div class="form-group">
           <label for="book_title">Title</label>
-          <%= f.text_field :title %>
+          <input class="form-control book_title" type="text" value="<%= @book.title %>" name="book[title]" id="book_title">
         </div>
         <div class="form-group">
           <label for="book_opinion">Opinion</label>
-          <%= f.text_area :body %>
+          <textarea class="form-control book_body" name="book[body]" id="book_body"><%= @book.body %></textarea>
         </div>
         <div class="form-group">
-            <%= f.submit 'Update book' %>
+          <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="Update Book">
         </div>
       <% end %>
       <%= link_to "Show", book_path(@book.id) %>
